@@ -1,0 +1,31 @@
+ //TECHATRONIC.COM  
+  // BLYNK LIBRARY  
+  // https://github.com/blynkkk/blynk-library  
+  // ESP8266 LIBRARY  
+  // https://github.com/ekstrand/ESP8266wifi  
+  //#define BLYNK_PRINT Serial  
+#define BLYNK_PRINT Serial
+#include <ESP8266WiFi.h>
+#include <BlynkSimpleEsp8266.h>
+
+// You should get Auth Token in the Blynk App.
+// Go to the Project Settings (nut icon).
+char auth[] = "R9t8qgxWqzTaeRTaeQbRVLjc42PE4bqm";
+
+// Your WiFi credentials.
+// Set password to "" for open networks.
+char ssid[] = "dektop";  // Enter Wifi Name 
+char pass[] = "asdlouy"; // Enter Password
+
+void setup()
+{
+  // Debug console
+  Serial.begin(9600);
+  Blynk.begin(auth, ssid, pass);
+
+}
+
+void loop()
+{
+  Blynk.run();
+}
